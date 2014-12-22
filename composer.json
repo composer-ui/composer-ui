@@ -1,0 +1,25 @@
+{
+    "name": "composer-ui/composer-ui",
+    "description": "Web UI for composer.",
+    "authors": [
+        {
+            "name": "CurosMJ",
+            "email": "curosmj@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "composer-ui/core":"dev-master"
+    },
+    "require-dev":{
+        "phpunit/phpunit":"3.7.*",
+        "orchestra/testbench": "2.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ComposerUI\\ComposerUI\\": "src/"
+        }
+    },
+    "minimum-stability":"dev",
+    "prefer-stable":true
+}
