@@ -24,14 +24,14 @@
 	<div class="input-group package-input">
 		<input type="text" name="package" class="form-control" placeholder="vendor/package"/>
 		<div class="input-group-addon">:</div>
-		<input type="text" name="value" class="form-control" placeholder="1.0.0"/>
+		<input type="text" name="version" class="form-control" placeholder="1.0.0"/>
 	</div>
 
 	<label>Required packages(dev)</label>
 	<div class="input-group dev-package-input">
 		<input type="text" name="package" class="form-control" placeholder="vendor/package"/>
 		<div class="input-group-addon">:</div>
-		<input type="text" name="value" class="form-control" placeholder="1.0.0"/>
+		<input type="text" name="version" class="form-control" placeholder="1.0.0"/>
 	</div>
 </div>
 </div>

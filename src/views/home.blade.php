@@ -69,13 +69,13 @@
                     @include('ComposerUI::details')
                 </div>
             </div>
+            @endif
             <?php 
             $actions = array('install','update','require','remove','validate','dump-autoload','create-project','init');
             ?>
             @foreach($actions as $action)
                 @include('ComposerUI::modal',array('action'=>$action))
             @endforeach
-            @endif
         </div>
     </body>
 </html>
