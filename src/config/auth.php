@@ -9,6 +9,6 @@ return array(
     | to access the UI. 
     |
     */
-    'username' => 'manan',
-    'password' => 'access'
+    'username' => '',
+    'password' => ''
 );
