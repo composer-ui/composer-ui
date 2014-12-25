@@ -10,7 +10,7 @@ $(document).ready(function(){
 function removeDevHandler()
 {
 	var dev = $("#remove-form input[name=dev]:checked").val();
-	if(dev == "true")
+	if(dev == 1)
 	{
 		$("#remove-form select[name=packages]").attr('disabled','disabled');
 		$("#remove-form select[name=dev-packages]").removeAttr('disabled');

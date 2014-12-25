@@ -17,7 +17,7 @@
 </div>
 <div class="col-md-6">
 	<label>
-		<input type="radio" name="dev" value=1/> Remove Dev Packages
+		<input type="radio" name="dev" value=1 /> Remove Dev Packages
 	</label>
 	<select multiple size="3" name="dev-packages" class="form-control" disabled>
 		<?php

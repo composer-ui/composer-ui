@@ -51,7 +51,7 @@ class ComposerUIController extends BaseController
     }
     public function postAction()
     {
-        if(!Input::has('action') || !Input::has('fields') || !Input::has('actionID'))
+        if(!Input::has('action') || !Input::has('actionID'))
             return Response::make('Improper Request',401);
         $action = Input::get('action');
         $fields = Input::get('fields');
