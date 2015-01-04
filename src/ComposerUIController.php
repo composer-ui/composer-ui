@@ -108,6 +108,7 @@ class ComposerUIController extends BaseController
         $outputFile = $logDirectory.'/'.Input::get('actionID').'-output';
         $output = new StreamOutput(fopen($outputFile,'w'),StreamOutput::VERBOSITY_NORMAL,false, new HtmlOutputFormatter());
         $composer = new ComposerUI(Session::get("ComposerUI.workingDir"),$output);
+        var_dump($fields);
         File::put($logDirectory.'/'.Input::get('actionID').'-status','working');
         $response = Response::json($composer->run($action,$fields));
         File::put($logDirectory.'/'.Input::get('actionID').'-status','complete');

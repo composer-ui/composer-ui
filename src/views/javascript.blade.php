@@ -75,6 +75,10 @@ function formProcess(form)
 		if(packages != '' && packages != undefined)
 			fields.packages = packages;
 	}
+	else if($(form).attr('id') == 'create-project-form')
+	{
+		fields["package"] = packageName($(form).find("[name=package]").val(),$(form).find("[name=version]").val())
+	}
 	else
 	{
 		packages = $(form).find('.package-input');
@@ -88,6 +92,21 @@ function formProcess(form)
 					if(_package != "" && _package != undefined &&  version != undefined && version != "")
 					{
 						fields.packages.push(packageName(_package,version));
+					}
+				}	
+			});
+		}
+		devPackages = $(form).find('.dev-package-input');
+		if(devPackages.length)
+		{
+			devPackages.each(function(index,item){
+				if(item !== undefined && item !== '')
+				{
+					var _package = $(item).find('[name=package]').val();
+					var version = $(item).find('[name=version]').val();
+					if(_package != "" && _package != undefined &&  version != undefined && version != "")
+					{
+						fields.devPackages.push(packageName(_package,version));
 					}
 				}	
 			});
@@ -106,6 +125,13 @@ function formProcess(form)
 		delete fields['packages'];
 	if(fields.devPackages.length == 0)
 		delete fields['devPackages'];
+	if($(form).attr('id') == "init-form")
+	{
+		fields["require"] = fields["packages"];
+		delete fields['packages'];
+		fields["require-dev"] = fields['devPackages'];
+		delete fields['devPackages'];
+	}
 	return fields;
 }
 function performAction()

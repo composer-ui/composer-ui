@@ -1,7 +1,7 @@
 <form id="dump-autoload-form">
 <div class="checkbox">
 		<label>
-			<input type="checkbox" name="o" value='true'/>Optimize
+			<input type="checkbox" name="optimize" value='true'/>Optimize
 		</label>
 	</div>
 	<div class="checkbox">
